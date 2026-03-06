@@ -1,0 +1,279 @@
+/* =================================================
+   🎨 DESIGN SYSTEM COLOR TOKENS
+   Edit these values when changing colours
+================================================= */
+
+:root {
+
+    /* =========================
+       BRAND COLORS
+    ========================== */
+
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --primary-active: #6d28d9;
+
+    --accent: #c084fc;
+    --accent-soft: #a855f7;
+
+    --secondary: #ec4899;
+
+    /* =========================
+       BACKGROUND SYSTEM
+    ========================== */
+
+    --bg-main: #0f0a1a;
+    --surface-1: #1a1326;
+    --surface-2: #231a33;
+    --surface-3: #2d2142;
+
+    --overlay: rgba(0,0,0,0.6);
+
+    /* =========================
+       TEXT SYSTEM
+    ========================== */
+
+    --text-primary: #f3f0ff;
+    --text-muted: #c4b5fd;
+    --text-subtle: #a78bfa;
+    --text-inverse: #0f0a1a;
+
+    /* =========================
+       STATE COLORS
+    ========================== */
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* =========================
+       BORDERS & DIVIDERS
+    ========================== */
+
+    --border: #3b2f52;
+    --divider: #2a1f3d;
+
+    /* =========================
+       CODE COLORS
+    ========================== */
+
+    --code-bg-base: #1a1326;
+    --code-text-base: #e9d8ff;
+    --code-keyword-base: #c084fc;
+    --code-string-base: #86efac;
+    --code-comment-base: #8884a3;
+
+    /* =========================
+       SHADOWS
+    ========================== */
+
+    --shadow-color-base: rgba(139,92,246,0.25);
+    --shadow-sm-base: 0 2px 6px rgba(0,0,0,0.3);
+    --shadow-md-base: 0 8px 20px rgba(0,0,0,0.4);
+    --shadow-lg-base: 0 12px 30px rgba(0,0,0,0.5);
+
+}
+
+
+/* =================================================
+   🧱 COMPONENT TOKENS
+   (Used throughout your UI)
+================================================= */
+
+:root {
+
+    /* Brand */
+
+    --color-primary: var(--primary);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-active: var(--primary-active);
+
+    --color-accent: var(--accent);
+    --color-accent-soft: var(--accent-soft);
+
+    --color-secondary: var(--secondary);
+
+    /* Background */
+
+    --color-bg: var(--bg-main);
+    --color-surface-1: var(--surface-1);
+    --color-surface-2: var(--surface-2);
+    --color-surface-3: var(--surface-3);
+
+    --color-overlay: var(--overlay);
+
+    /* Text */
+
+    --color-text: var(--text-primary);
+    --color-text-muted: var(--text-muted);
+    --color-text-subtle: var(--text-subtle);
+    --color-text-inverse: var(--text-inverse);
+
+    /* States */
+
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-error: var(--error);
+    --color-info: var(--info);
+
+    /* Borders */
+
+    --color-border: var(--border);
+    --color-divider: var(--divider);
+
+    /* Code */
+
+    --code-bg: var(--code-bg-base);
+    --code-text: var(--code-text-base);
+    --code-keyword: var(--code-keyword-base);
+    --code-string: var(--code-string-base);
+    --code-comment: var(--code-comment-base);
+
+    /* Shadows */
+
+    --shadow-color: var(--shadow-color-base);
+    --shadow-sm: var(--shadow-sm-base);
+    --shadow-md: var(--shadow-md-base);
+    --shadow-lg: var(--shadow-lg-base);
+
+}
+
+
+/* =================================================
+   🔘 BUTTON SYSTEM
+================================================= */
+
+:root {
+
+    --button-primary-bg: var(--primary);
+    --button-primary-text: #ffffff;
+    --button-primary-hover: var(--primary-hover);
+    --button-primary-active: var(--primary-active);
+
+    --button-secondary-bg: var(--surface-2);
+    --button-secondary-text: var(--text-primary);
+    --button-secondary-hover: var(--surface-3);
+
+    --button-disabled-bg: #2e2544;
+    --button-disabled-text: #75689e;
+
+}
+
+
+/* =================================================
+   🌕 LIGHT MODE
+   Overrides only the base tokens
+================================================= */
+
+[data-theme="light"] {
+
+    /* Brand */
+
+    --primary: #7c3aed;
+    --primary-hover: #6d28d9;
+    --primary-active: #5b21b6;
+
+    --accent: #a855f7;
+    --accent-soft: #c084fc;
+
+    --secondary: #db2777;
+
+    /* Background */
+
+    --bg-main: #f9f6ff;
+    --surface-1: #ffffff;
+    --surface-2: #f3ecff;
+    --surface-3: #e9ddff;
+
+    --overlay: rgba(0,0,0,0.1);
+
+    /* Text */
+
+    --text-primary: #1a1326;
+    --text-muted: #4c3b6e;
+    --text-subtle: #6b5b95;
+    --text-inverse: #ffffff;
+
+    /* Borders */
+
+    --border: #d9c7ff;
+    --divider: #e6d8ff;
+
+    /* Shadows */
+
+    --shadow-color-base: rgba(124,58,237,0.15);
+
+}
+
+
+
+
+
+
+/* ============================================
+   BASIC PAGE LAYOUT
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+}
+
+
+/* ============================================
+   THEME TOGGLE BUTTON
+============================================ */
+
+#theme-toggle {
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background: var(--button-secondary-bg);
+    color: var(--button-secondary-text);
+
+    border: 1px solid var(--color-border);
+
+    padding: 8px 14px;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+#theme-toggle:hover {
+    background: var(--button-secondary-hover);
+}

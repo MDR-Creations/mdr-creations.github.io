@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MDR Creations</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            color: #ffffff;
+    <!-- Load Theme Immediately -->
+    <script>
+        if (localStorage.getItem("theme") === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
         }
+    </script>
 
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #a8b2d1;
-        }
-    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to MDR Creations</h1>
-        <p>More coming soon.</p>
-    </div>
-</body>
-</html>
 
+<body>
+
+<!-- Theme Toggle Button -->
+<button id="theme-toggle" aria-label="Toggle Theme">
+    🌙 / ☀️
+</button>
+
+<div class="container">
+
+    <h1>Welcome to MDR Creations</h1>
+
+    <p>More coming soon.</p>
+
+</div>
+
+<!-- Theme Toggle Script -->
+<script src="assets/js/dark-light-toggle.js"></script>
+
+</body>
+
+</html>
