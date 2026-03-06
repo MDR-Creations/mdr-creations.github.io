@@ -237,6 +237,15 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -245,6 +254,7 @@ body {
     align-items: center;
 
     min-height: 100vh;
+    overflow-x: hidden;
 
     background: var(--color-bg);
     color: var(--color-text);
@@ -273,6 +283,16 @@ h1 {
 p {
     font-size: 1.2rem;
     color: var(--color-text-muted);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
 
 
@@ -328,17 +348,23 @@ p {
     display: flex;
     align-items: center;
     gap: 1rem;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .logo img {
     width: 50px;
     height: 50px;
+    flex-shrink: 0;
 }
 
 .logo h1 {
     font-size: 1.5rem;
     color: var(--text-primary);
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* =================================================
@@ -352,6 +378,8 @@ p {
     background-color: var(--surface-2);
     color: var(--text-primary);
     padding: 1rem;
+    position: relative;
+    flex-shrink: 0;
 }
 
 .menu-toggle {
@@ -455,6 +483,16 @@ p {
 .team-hero p {
     font-size: 1.15rem;
     color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+    .team-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .team-hero p {
+        font-size: 0.95rem;
+    }
 }
 
 /* Responsive Grid */
@@ -811,6 +849,16 @@ p {
     margin-bottom: 2.5rem;
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-sub {
+        font-size: 0.95rem;
+    }
+}
+
 
 /* =================================================
    🏠 HOME PAGE — SERVICES GRID
@@ -959,6 +1007,16 @@ p {
     border-color: #fff;
 }
 
+@media (max-width: 600px) {
+    .cta-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-banner p {
+        font-size: 0.95rem;
+    }
+}
+
 
 /* =================================================
    💰 PRICING PAGE
@@ -978,6 +1036,16 @@ p {
 .pricing-hero p {
     font-size: 1.1rem;
     color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+    .pricing-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .pricing-hero p {
+        font-size: 0.95rem;
+    }
 }
 
 .pricing-section {
@@ -1135,6 +1203,16 @@ p {
     max-width: 640px;
     margin: 0 auto;
     line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .page-hero p {
+        font-size: 0.95rem;
+    }
 }
 
 
@@ -1331,6 +1409,12 @@ p {
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 2.5rem 2rem;
+}
+
+@media (max-width: 600px) {
+    .contact-form-wrapper {
+        padding: 1.5rem 1rem;
+    }
 }
 
 .contact-form-wrapper h2 {
